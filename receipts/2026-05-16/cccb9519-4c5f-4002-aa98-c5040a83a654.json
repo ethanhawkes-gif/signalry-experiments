@@ -1,0 +1,19 @@
+{
+  "receipt_id": "cccb9519-4c5f-4002-aa98-c5040a83a654",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.815Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "698f98867bc1f4d99cf027eb7f0b8e6ea9d9b07212ea7b9887b3a55604fc334c",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "sanjay.poonen@cohesity.com",
+    "name": "Sanjay Poonen",
+    "company": "Cohesity",
+    "subject": "Rethinking Industry Signals Together?"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIBwSzRv1qBr3Q4W3dfAjWW4Ctydd2o1YGtkE/U4SG5yYAiEA8xK3exmL21YWolRZC49Etg2oz/Q7qz8ujQpD84XDanM="
+}
