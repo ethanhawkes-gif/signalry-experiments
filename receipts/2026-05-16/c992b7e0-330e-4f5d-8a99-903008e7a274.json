@@ -1,0 +1,22 @@
+{
+  "receipt_id": "c992b7e0-330e-4f5d-8a99-903008e7a274",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.655Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "bd62dbd16f54ed7fef0b7a963ff8e5f08a86e94c01c6f1d15cf055d051d09334",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "arjun@cloaked.id",
+    "name": "Arjun Bhatnagar",
+    "company": "Cloaked",
+    "subject": "Rethinking Industry Signals Together?",
+    "draft_id": "r-167826422296498533",
+    "message_id": "19e30b6b05cacdcc",
+    "sent_at": "2026-05-16T12:15:40.190Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEQCIGm6aJ/EzgdHjbUC1GERWkZJPxvY5jOt3pl+0qIrlgfIAiBetElAaya1Ev98BbnmzkOxe4uu/DHLN0IlF0l3FmMmYg=="
+}
