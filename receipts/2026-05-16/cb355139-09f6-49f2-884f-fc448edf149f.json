@@ -1,0 +1,22 @@
+{
+  "receipt_id": "cb355139-09f6-49f2-884f-fc448edf149f",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.644Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "2a17819d6334c8910c8077f9a1108ca675e7926a51c23e2b4d51f2596d547cd5",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "jolie.fleming@ihg.com",
+    "name": "Jolie Fleming",
+    "company": "IHG Hotels & Resorts",
+    "subject": "One intelligence layer across Six Senses, Regent, and Vignette",
+    "draft_id": "r-30219406649324387",
+    "message_id": "19e30b66aa3ba93e",
+    "sent_at": "2026-05-16T12:15:22.297Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIEuXwNdikABJoM/ZDAudO++Mak8oCjGijzPULr4Wz2rJAiEA+Xmaj+5DNMhkkUL+AYOigutZHKlev4NXqN+PYF1QZDY="
+}
