@@ -1,0 +1,22 @@
+{
+  "receipt_id": "a3176208-16d9-43f0-96bd-fd8e8f79c07b",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.654Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "422836414742474c6fab02d1cf380926a79a0ceacfbd0ddc29cf2b689f4da79c",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "philip@starcloud.com",
+    "name": "Philip Johnston",
+    "company": "Starcloud",
+    "subject": "Challenging Industry Norms Together?",
+    "draft_id": "r7306277460448230098",
+    "message_id": "19e30b6a9e62debc",
+    "sent_at": "2026-05-16T12:15:38.042Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEQCIBHVMf488eRPhmOwgOBKJKB8THI0kZunQp0AL8qp6P2rAiBYRaxFKuzk/VmrrbJEGo06McU/MNj8yOcpoorK2J2GfA=="
+}
