@@ -1,0 +1,19 @@
+{
+  "receipt_id": "a67bca4c-307a-4c70-83fc-447edf2b2004",
+  "version": "1.0",
+  "issued_at": "2026-05-17T10:17:32.566Z",
+  "agent_id": "lumen",
+  "user_id": "ethan",
+  "action": "fleet.semantic.index.built",
+  "instruction_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "unspecified",
+  "outcome": "3,175 chunks at 1024-dim, cost $0.02. Searchable via state/semantic-index/corpus.jsonl",
+  "metadata": {
+    "chunks": 3175,
+    "files": 347,
+    "dims": 1024,
+    "cost_usd": 0.02
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQCaxmW8KDE7bwL3dnPfVq+Sqsa+8WAkpY5QzHcH0k7iMgIgFC1eR9zXsdupupf+cqNRHkDTjXZDbl0QU9zN5zyA2ZU="
+}
