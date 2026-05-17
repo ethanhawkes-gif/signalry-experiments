@@ -1,0 +1,14 @@
+{
+  "receipt_id": "2ac3464c-cb40-4ef4-b3ea-a68227adccf6",
+  "version": "1.0",
+  "issued_at": "2026-05-16T16:54:17.193Z",
+  "agent_id": "lumen@signalry-aool",
+  "user_id": "ethan@signalry.ai",
+  "action": "test",
+  "instruction_hash": "11734057ffd46cb177a998eaf7f7d92a25bdd2e13459ceb799c1beae0f3de045",
+  "scope": "test",
+  "outcome": "unspecified",
+  "metadata": {},
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQCbuIJDzIVa7SFoviJR4lCXXyfWv0ZUWNhuwnoQxWpavwIgMcr1gdlRaBDz/YlEUmVYszbNAMXfvAtUvgRZd1lv6qQ="
+}
