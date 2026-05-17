@@ -1,0 +1,19 @@
+{
+  "receipt_id": "1bdb683c-1a03-4fa1-9d52-0b22c5c32139",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.804Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "c3fd4fa4b9b2e711d0d526d659ec353fcabc22c72432fd73e0fedd59852b2520",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "jon.zuo@1-act.com",
+    "name": "Jon Zuo",
+    "company": "Advanced Cooling Technologies",
+    "subject": "Re: Jon — quick follow"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEQCIBd0H/es2GWm2xB5nubAej5mlo7YAc/UmnRpdghBRjc0AiBps6o+RiVw84gmFN+Ypx8Ulcmpj/VzYOUT60lTPz+8bg=="
+}
