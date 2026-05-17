@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickGrant — AI Grant Writing for Nonprofits</title>
+  <meta name="description" content="Stop spending weeks on grant applications. QuickGrant writes compelling, tailored grant proposals in minutes using AI trained on winning applications.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #16a34a;
+      --green-light: #dcfce7;
+      --green-dark: #166534;
+      --gray-900: #111827;
+      --gray-700: #374151;
+      --gray-500: #6b7280;
+      --gray-100: #f3f4f6;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--gray-900); background: #fff; }
+    .hero { padding: 80px 24px 60px; text-align: center; max-width: 720px; margin: 0 auto; }
+    .badge { display: inline-block; background: var(--green-light); color: var(--green-dark); font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 100px; margin-bottom: 20px; }
+    h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 20px; }
+    h1 span { color: var(--green); }
+    .sub { font-size: 18px; color: var(--gray-700); line-height: 1.6; max-width: 540px; margin: 0 auto 36px; }
+    .cta-form { display: flex; gap: 10px; max-width: 420px; margin: 0 auto 16px; flex-wrap: wrap; justify-content: center; }
+    .cta-form input { flex: 1; min-width: 220px; padding: 14px 16px; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 15px; outline: none; }
+    .cta-form input:focus { border-color: var(--green); }
+    .cta-form button { background: var(--green); color: #fff; border: none; padding: 14px 24px; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
+    .cta-form button:hover { background: var(--green-dark); }
+    .hint { font-size: 13px; color: var(--gray-500); }
+    .social-proof { padding: 48px 24px; background: var(--gray-100); text-align: center; }
+    .social-proof p { font-size: 14px; color: var(--gray-500); font-weight: 500; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .stats { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat .n { font-size: 32px; font-weight: 800; color: var(--gray-900); }
+    .stat .l { font-size: 13px; color: var(--gray-500); margin-top: 2px; }
+    .features { padding: 72px 24px; max-width: 900px; margin: 0 auto; }
+    .features h2 { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 48px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 28px; }
+    .card { padding: 28px; border: 1px solid #e5e7eb; border-radius: 14px; }
+    .icon { font-size: 28px; margin-bottom: 12px; }
+    .card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: var(--gray-700); line-height: 1.6; }
+    .bottom-cta { padding: 72px 24px; text-align: center; background: var(--green); color: #fff; }
+    .bottom-cta h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+    .bottom-cta p { font-size: 16px; opacity: 0.85; margin-bottom: 28px; }
+    .bottom-cta input { padding: 14px 16px; border-radius: 10px; border: none; font-size: 15px; width: 260px; margin-right: 8px; }
+    .bottom-cta button { background: var(--green-dark); color: #fff; border: none; padding: 14px 22px; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; }
+    footer { padding: 24px; text-align: center; font-size: 13px; color: var(--gray-500); }
+  </style>
+  <!-- Plausible Analytics placeholder -->
+  <script defer data-domain="quickgrant.io" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="badge">✨ AI-Powered Grant Writing</div>
+    <h1>Win more grants.<br><span>Write them in minutes.</span></h1>
+    <p class="sub">QuickGrant uses AI trained on thousands of winning grant applications to write compelling, funder-matched proposals — so you spend time doing the work, not writing about it.</p>
+    <form class="cta-form" onsubmit="handleSubmit(event)">
+      <input type="email" placeholder="your@nonprofit.org" required id="email-input">
+      <button type="submit">Get Early Access</button>
+    </form>
+    <p class="hint">Free during beta · No credit card · Launching Q3 2026</p>
+  </section>
+
+  <section class="social-proof">
+    <p>Why grant writers are switching</p>
+    <div class="stats">
+      <div class="stat"><div class="n">14 days</div><div class="l">avg time saved per application</div></div>
+      <div class="stat"><div class="n">3.2×</div><div class="l">more applications submitted</div></div>
+      <div class="stat"><div class="n">$0</div><div class="l">during beta</div></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Everything a grant writer needs</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🎯</div><h3>Funder Matching</h3><p>AI scans 40,000+ active grants and surfaces the ones your organization is most likely to win, scored by fit.</p></div>
+      <div class="card"><div class="icon">✍️</div><h3>Auto-Draft Narratives</h3><p>Paste your program description. Get a full narrative draft — needs statement, outcomes, budget justification — in under 3 minutes.</p></div>
+      <div class="card"><div class="icon">📊</div><h3>Win-Rate Optimization</h3><p>Compare your draft against winning applications for that funder. Specific, actionable feedback before you submit.</p></div>
+      <div class="card"><div class="icon">🔄</div><h3>Reusable Boilerplate</h3><p>Save your org's mission, programs, and data once. QuickGrant pulls the right sections into every new application.</p></div>
+      <div class="card"><div class="icon">📅</div><h3>Deadline Tracker</h3><p>Never miss a deadline. Smart calendar syncs grant cycles and sends reminders tuned to how long your drafts take.</p></div>
+      <div class="card"><div class="icon">👥</div><h3>Team Collaboration</h3><p>Multiple writers, one application. Real-time editing, comment threads, version history built for grant teams.</p></div>
+    </div>
+  </section>
+
+  <section class="bottom-cta">
+    <h2>Join the waitlist</h2>
+    <p>First 500 nonprofits get 12 months free + founding member pricing.</p>
+    <form onsubmit="handleSubmit(event)" style="display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+      <input type="email" placeholder="your@nonprofit.org" required>
+      <button type="submit">Reserve My Spot</button>
+    </form>
+  </section>
+
+  <footer>© 2026 QuickGrant · <a href="mailto:hello@quickgrant.io" style="color:inherit;">hello@quickgrant.io</a></footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      // Track signup intent
+      if (window.plausible) plausible('Signup', {props: {source: 'hero'}});
+      e.target.innerHTML = '<p style="color:#16a34a;font-weight:700;font-size:16px;">✓ You\'re on the list! We\'ll be in touch.</p>';
+      // In production: POST to waitlist endpoint
+      console.log('Waitlist signup:', email);
+    }
+  </script>
+</body>
+</html>

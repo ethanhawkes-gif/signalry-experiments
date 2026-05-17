@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crisis Compass — AI-Powered PR Crisis Intelligence</title>
+  <meta name="description" content="Know before it blows. Crisis Compass monitors the web, social, and news in real time to detect reputation threats and guide your response — before they become crises.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #dc2626;
+      --red-light: #fee2e2;
+      --red-dark: #991b1b;
+      --amber: #d97706;
+      --gray-900: #111827;
+      --gray-700: #374151;
+      --gray-500: #6b7280;
+      --gray-100: #f3f4f6;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--gray-900); background: #fff; }
+    .hero { padding: 80px 24px 60px; text-align: center; max-width: 720px; margin: 0 auto; }
+    .badge { display: inline-block; background: var(--red-light); color: var(--red-dark); font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 100px; margin-bottom: 20px; }
+    h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 20px; }
+    h1 span { color: var(--red); }
+    .sub { font-size: 18px; color: var(--gray-700); line-height: 1.6; max-width: 560px; margin: 0 auto 36px; }
+    .cta-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto 16px; flex-wrap: wrap; justify-content: center; }
+    .cta-form input { flex: 1; min-width: 220px; padding: 14px 16px; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 15px; outline: none; }
+    .cta-form input:focus { border-color: var(--red); }
+    .cta-form button { background: var(--red); color: #fff; border: none; padding: 14px 24px; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .cta-form button:hover { background: var(--red-dark); }
+    .hint { font-size: 13px; color: var(--gray-500); }
+    .threat-bar { background: #0f172a; color: #fff; padding: 48px 24px; text-align: center; }
+    .threat-bar h2 { font-size: 14px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 28px; }
+    .threats { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .threat { background: #1e293b; border-radius: 12px; padding: 16px 20px; min-width: 180px; text-align: left; }
+    .threat .level { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .threat.high .level { color: #f87171; }
+    .threat.med .level { color: #fbbf24; }
+    .threat.low .level { color: #34d399; }
+    .threat .text { font-size: 14px; color: #e2e8f0; line-height: 1.4; }
+    .threat .time { font-size: 11px; color: #64748b; margin-top: 6px; }
+    .features { padding: 72px 24px; max-width: 900px; margin: 0 auto; }
+    .features h2 { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 48px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 28px; }
+    .card { padding: 28px; border: 1px solid #e5e7eb; border-radius: 14px; }
+    .icon { font-size: 28px; margin-bottom: 12px; }
+    .card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: var(--gray-700); line-height: 1.6; }
+    .bottom-cta { padding: 72px 24px; text-align: center; background: #0f172a; color: #fff; }
+    .bottom-cta h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+    .bottom-cta p { font-size: 16px; color: #94a3b8; margin-bottom: 28px; }
+    .bottom-cta input { padding: 14px 16px; border-radius: 10px; border: none; font-size: 15px; width: 260px; margin-right: 8px; }
+    .bottom-cta button { background: var(--red); color: #fff; border: none; padding: 14px 22px; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; }
+    footer { padding: 24px; text-align: center; font-size: 13px; color: var(--gray-500); }
+  </style>
+  <script defer data-domain="crisiscompass.io" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="badge">🧭 Real-Time Reputation Intelligence</div>
+    <h1>Know before<br><span>it blows up.</span></h1>
+    <p class="sub">Crisis Compass monitors news, social media, forums, and review sites 24/7. AI detects emerging threats to your brand — and gives you a response playbook — before journalists call.</p>
+    <form class="cta-form" onsubmit="handleSubmit(event)">
+      <input type="email" placeholder="pr@yourcompany.com" required>
+      <button type="submit">Start Free Monitoring</button>
+    </form>
+    <p class="hint">14-day free trial · No credit card · Setup in 5 minutes</p>
+  </section>
+
+  <section class="threat-bar">
+    <h2>Live threat intelligence · Sample feed</h2>
+    <div class="threats">
+      <div class="threat high">
+        <div class="level">⚠ High · Trending</div>
+        <div class="text">Negative review cluster forming on Reddit r/travel</div>
+        <div class="time">Detected 4 min ago · 23 mentions</div>
+      </div>
+      <div class="threat med">
+        <div class="level">● Medium · Watch</div>
+        <div class="text">Local news outlet querying your PR contact</div>
+        <div class="time">Detected 12 min ago · 1 mention</div>
+      </div>
+      <div class="threat low">
+        <div class="level">✓ Low · Resolved</div>
+        <div class="text">Negative Twitter thread — sentiment stabilizing</div>
+        <div class="time">Detected 2h ago · 67 mentions</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Your early warning system for reputation risk</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">📡</div><h3>Always-On Monitoring</h3><p>Continuous scans across Twitter/X, Reddit, news wires, review platforms, and 50,000+ online sources — all in real time.</p></div>
+      <div class="card"><div class="icon">🤖</div><h3>AI Threat Scoring</h3><p>Not all mentions are crises. AI distinguishes signal from noise, scores threat level, and only alerts you when it matters.</p></div>
+      <div class="card"><div class="icon">📋</div><h3>Response Playbooks</h3><p>For each threat type, get a customized response framework: who to notify, what to say, what NOT to say, and timeline.</p></div>
+      <div class="card"><div class="icon">⚡</div><h3>Velocity Alerts</h3><p>Catch the hockey stick early. Alerts trigger when mention velocity spikes, not just when volume is already high.</p></div>
+      <div class="card"><div class="icon">🔍</div><h3>Competitor Watch</h3><p>Track competitors' crises too. When they stumble, know immediately — that's often your best window to win trust.</p></div>
+      <div class="card"><div class="icon">📈</div><h3>Sentiment Trending</h3><p>Weekly sentiment scores, trend lines, and benchmarks against industry peers. Proactive reputation management, not reactive.</p></div>
+    </div>
+  </section>
+
+  <section class="bottom-cta">
+    <h2>Your next crisis is already forming.</h2>
+    <p>Most brands don't find out until it's already trending. Start monitoring today.</p>
+    <form onsubmit="handleSubmit(event)" style="display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+      <input type="email" placeholder="pr@yourcompany.com" required>
+      <button type="submit">Start Free Trial</button>
+    </form>
+  </section>
+
+  <footer>© 2026 Crisis Compass · <a href="mailto:hello@crisiscompass.io" style="color:inherit;">hello@crisiscompass.io</a></footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      if (window.plausible) plausible('Signup', {props: {source: 'cta'}});
+      e.target.innerHTML = '<p style="color:#34d399;font-weight:700;font-size:16px;">✓ Monitoring activated. Check your inbox.</p>';
+    }
+  </script>
+</body>
+</html>
