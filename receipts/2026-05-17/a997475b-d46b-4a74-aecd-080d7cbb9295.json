@@ -1,0 +1,18 @@
+{
+  "receipt_id": "a997475b-d46b-4a74-aecd-080d7cbb9295",
+  "version": "1.0",
+  "issued_at": "2026-05-17T10:17:31.756Z",
+  "agent_id": "lumen",
+  "user_id": "ethan",
+  "action": "fleet.mesh.launched",
+  "instruction_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "unspecified",
+  "outcome": "All nodes connected: lumen, chipper, centurion, pip, bark, worker-2. 126 min uptime.",
+  "metadata": {
+    "nodes": 6,
+    "port": 4747,
+    "uptime_min": 126
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEQCICxB1cxutOXXMRUZkTVMS2e4Jw7hEL1nu54g9QjTcZ6QAiAVFZDRXD/H7rfyDeUQAKkMD9/Um76Nn6zDvrQhhe19tg=="
+}
