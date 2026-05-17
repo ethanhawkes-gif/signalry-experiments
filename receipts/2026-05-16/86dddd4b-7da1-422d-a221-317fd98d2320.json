@@ -1,0 +1,19 @@
+{
+  "receipt_id": "86dddd4b-7da1-422d-a221-317fd98d2320",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.818Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "d5d89c4898bdc1bee3853fdfc9de515a5d5ae01d48a372e2dc9d36d686aea971",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "ran@masspay.io",
+    "name": "Ran Grushkowsky",
+    "company": "MassPay",
+    "subject": "Navigating Growth’s Hidden Pitfalls"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIGpB0tVnld+ASV2lozdE2d+6yDycjn7zxf4SxcfQnQIvAiEAoDKcvsz3sbXf1mbhZRB6Ho9mz2phrn6tvYAyhwAdFTA="
+}
