@@ -1,0 +1,22 @@
+{
+  "receipt_id": "17935422-d84f-407a-8900-72793e828be7",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.649Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "ed908a948e208ccc6f957a859a4bcea8242e743c5bfe467a20b07366a7fa304d",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "zach@plaid.com",
+    "name": "Zach Perret",
+    "company": "Plaid",
+    "subject": "Unveiling Hidden Industry Signals",
+    "draft_id": "r-9080143122727162125",
+    "message_id": "19e30b689615b8ea",
+    "sent_at": "2026-05-16T12:15:29.717Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIEgGQ7ZqgemJYE3JDRLl1KSRGXtPHUsGcNxgPXfNSeF2AiEAzyCSRZVTTa/a2IPx89JocDyjZeu0mOgIDJsGQJDUSLo="
+}
