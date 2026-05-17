@@ -1,0 +1,22 @@
+{
+  "receipt_id": "2ed3acce-4f25-4a66-b49b-8763638194d5",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.632Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "d11dd489f927288524d4d8577d5ef11711f61e96c84b3cc9dfb275942987d4a6",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "matias@notco.com",
+    "name": "Matias Muchnick",
+    "company": "NotCo",
+    "subject": "Re: Matias — quick follow",
+    "draft_id": "r5217150333535129806",
+    "message_id": "19e30b62efacf6ce",
+    "sent_at": "2026-05-16T12:15:06.869Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIFYOnEVvPMFD4SA1aQTFv9XX6B4gORmVVASgU15REPMKAiEAlBHaO+BJmxkEj8n4aYwAcKTcEOrf+hyuvvcfza74A7o="
+}
