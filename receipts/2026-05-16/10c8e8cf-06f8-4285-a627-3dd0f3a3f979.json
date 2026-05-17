@@ -1,0 +1,22 @@
+{
+  "receipt_id": "10c8e8cf-06f8-4285-a627-3dd0f3a3f979",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.642Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "ee51168661d9b71e092d446a0caacbe6578fdf487ab057f8b8f15b4ac23f3567",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "alejandro.reynal@fourseasons.com",
+    "name": "Alejandro Reynal",
+    "company": "Four Seasons Hotels and Resorts",
+    "subject": "Four Seasons' competitive intelligence layer",
+    "draft_id": "r6391499027580295938",
+    "message_id": "19e30b65f314a7c4",
+    "sent_at": "2026-05-16T12:15:19.093Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEYCIQDUGQAqEzmMWlEx0PHIb4L68ahNl4OjLblsxzajNz08twIhAMB9csffJNSxjan4n+S8PrRybWH+WSaDTUstAo04xZHf"
+}
