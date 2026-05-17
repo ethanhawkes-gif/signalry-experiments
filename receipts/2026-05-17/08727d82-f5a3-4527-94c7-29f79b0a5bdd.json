@@ -1,0 +1,14 @@
+{
+  "receipt_id": "08727d82-f5a3-4527-94c7-29f79b0a5bdd",
+  "version": "1.0",
+  "issued_at": "2026-05-17T10:17:09.215Z",
+  "agent_id": "lumen",
+  "user_id": "ethan",
+  "action": "test",
+  "instruction_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "unspecified",
+  "outcome": "unspecified",
+  "metadata": {},
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEQCIEnR210/XxBRRPzrVJmeu8y0F8wa9qvuuxmvjKjqaWS2AiBjL07s9VnQCvcIiGlzVxH4VxfufNeL9108+anNC3iqWw=="
+}
