@@ -1,0 +1,19 @@
+{
+  "receipt_id": "5b89b51a-1fe9-4354-b24e-04c47f99c188",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.813Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "10bfa0e81b38cbe1d4b58c35fe0f4c74bb4f303996f3cec7a0691ed5c8717131",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "glen.moroney@scenic.com.au",
+    "name": "Glen Moroney",
+    "company": "Scenic Group",
+    "subject": "Scenic Eclipse's expedition intelligence edge"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEYCIQDPV40fhNsEo++1iuo2Ck83rHDpHJO+STt+awxHHNCpTwIhALhbGnSMwIVT2vWFyCpfWWbLhsRF1OvM/4TpI1cDM2ie"
+}
