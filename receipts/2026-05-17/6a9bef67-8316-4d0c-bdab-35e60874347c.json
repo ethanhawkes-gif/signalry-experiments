@@ -1,0 +1,18 @@
+{
+  "receipt_id": "6a9bef67-8316-4d0c-bdab-35e60874347c",
+  "version": "1.0",
+  "issued_at": "2026-05-17T10:17:32.363Z",
+  "agent_id": "lumen",
+  "user_id": "ethan",
+  "action": "together.finetune.completed",
+  "instruction_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "unspecified",
+  "outcome": "Model: ethanhawkes_1d89/Qwen2.5-7B-Instruct-signalry-sr-v1-b179adb7. 3 epochs, $4.00.",
+  "metadata": {
+    "job_id": "ft-c91d2330-8fca",
+    "examples": 643,
+    "cost_usd": 4
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQC7ySJO2OcVZ4/0zk+79ugVInSBaYMailfI3Mgb2pBIiwIgCy6tlhx1cih3Cq0gmg/qZpptkQtFJDliuTyoNPqxrpo="
+}
