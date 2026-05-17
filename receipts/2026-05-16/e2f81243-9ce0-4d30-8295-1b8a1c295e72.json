@@ -1,0 +1,22 @@
+{
+  "receipt_id": "e2f81243-9ce0-4d30-8295-1b8a1c295e72",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.637Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "3cd18dadbae3fd330522dc2ec9487e3da9c3c6480f1ef646fb2f358c6ba2218b",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "dondra.ritzenthaler@azamara.com",
+    "name": "Dondra Ritzenthaler",
+    "company": "Azamara",
+    "subject": "Azamara's tech roadmap post-independence",
+    "draft_id": "r-6521780615934661334",
+    "message_id": "19e30b646b7cee9e",
+    "sent_at": "2026-05-16T12:15:13.038Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQDr0e9PSOzwNhHG7IqdzPxHrHW87ba+ACqas4E1oVsxogIgXkha9hkbGej+svlmkOvCDHX9PHrLcQDgomf6m/FsgUQ="
+}
