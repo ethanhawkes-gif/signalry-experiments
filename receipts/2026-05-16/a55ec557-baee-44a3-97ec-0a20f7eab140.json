@@ -1,0 +1,22 @@
+{
+  "receipt_id": "a55ec557-baee-44a3-97ec-0a20f7eab140",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.643Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "89bdf409a8d977fe53e57cb83b995efb0af6727decf10816906eb0ba426b53b5",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "dan.ruff@belmond.com",
+    "name": "Dan Ruff",
+    "company": "Belmond (LVMH)",
+    "subject": "Belmond's portfolio upgrade — the intelligence angle",
+    "draft_id": "r9186979707898897497",
+    "message_id": "19e30b6644bd7c12",
+    "sent_at": "2026-05-16T12:15:20.786Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIFG0nkcaPlW+mpaUF2DvMacRkMSWBlUV+FjQtn+ni25sAiEAnOqJInAtiRLQvU8oZWYJ73dqsWo0CgFV+PHAUmjeBXw="
+}
