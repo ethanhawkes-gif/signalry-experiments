@@ -1,0 +1,19 @@
+{
+  "receipt_id": "81f1b24a-2127-4619-8fe6-94261cb96dc9",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.809Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "ca19f67823fec5ebfc6a4a177ae06e169e052188ee24d80df8ab77ea4480f641",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "michael.ungerer@explorajourneys.com",
+    "name": "Michael Ungerer",
+    "company": "Explora Journeys",
+    "subject": "Building Explora's positioning without the historical data"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQCET0BA8bkPi0btvsOv9UTBpuoYpvC+bsLWFZli2Pn+xwIgU66jJm/bc3WkUlcyVqmMFwrGnt2H8zw3Bvl7Ur1pojI="
+}
