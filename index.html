@@ -3,139 +3,222 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CampaignManager AI - Autonomous Social Media for B2B</title>
+  <title>Signalry Experiment Factory</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary-bg': 'rgb(8, 20, 45)',
-            'accent-green': 'rgb(16, 185, 129)',
-            'accent-orange': 'rgb(249, 115, 22)',
-          },
-          backgroundImage: {
-            'gradient-navy': 'linear-gradient(to right, #08142d, #1e293b)',
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 </head>
-<body class="bg-primary-bg text-white font-sans leading-relaxed">
+<body class="bg-gray-900 text-gray-100 min-h-screen font-sans">
+  <div class="container mx-auto px-4 py-8">
 
-  <!-- Hero Section -->
-  <section class="px-6 py-20 md:py-32 text-center bg-gradient-navy">
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-      Autonomous Social Media <span class="text-accent-green">That Just Works</span>
-    </h1>
-    <p class="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto">
-      Let AI design, execute, and track high-performing social campaigns — with full transparency on every action.
-    </p>
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="#" class="px-8 py-3 bg-accent-green hover:bg-green-500 text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105">
-        Start Free Trial
-      </a>
-      <a href="#" class="px-8 py-3 bg-accent-orange hover:orange-500 text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105">
-        Book Demo
-      </a>
-    </div>
-  </section>
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-2">
+        Signalry Experiment Factory
+      </h1>
+      <p class="text-gray-400 text-sm">Built: 2026-05-17 10:11 UTC</p>
+      <div class="flex items-center justify-center mt-2 text-green-400 space-x-2">
+        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+        <span class="text-xs uppercase tracking-wider">Live — auto-updating</span>
+      </div>
+    </header>
 
-  <!-- Value Props -->
-  <section class="px-6 py-16 bg-primary-bg">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-      <div class="p-6">
-        <div class="text-5xl mb-4">🤖</div>
-        <h3 class="text-2xl font-bold mb-3">Fully Autonomous</h3>
-        <p class="opacity-90">
-          Our AI handles campaign planning, content creation, posting, and engagement — no manual input needed.
-        </p>
-      </div>
-      <div class="p-6">
-        <div class="text-5xl mb-4">📊</div>
-        <h3 class="text-2xl font-bold mb-3">Performance Tracked</h3>
-        <p class="opacity-90">
-          Real-time analytics show engagement, reach, and lead generation — all optimized automatically.
-        </p>
-      </div>
-      <div class="p-6">
-        <div class="text-5xl mb-4">🧾</div>
-        <h3 class="text-2xl font-bold mb-3">Full Transparency</h3>
-        <p class="opacity-90">
-          Every AI decision is logged with receipts — see exactly what was done and why.
-        </p>
+    <!-- Spend Metric -->
+    <div class="flex justify-center mb-8">
+      <div class="bg-gray-800 rounded-lg px-6 py-3 shadow-lg border border-gray-700">
+        <span class="text-gray-300 text-sm">Spend to date:</span>
+        <span class="text-green-400 font-bold text-lg ml-2">$4.28</span>
+        <span class="text-gray-500 text-sm"> / $1,000 credit</span>
       </div>
     </div>
-  </section>
 
-  <!-- How It Works -->
-  <section class="px-6 py-16 bg-opacity-50 bg-primary-bg">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
-    <div class="max-w-4xl mx-auto space-y-12">
-      <div class="flex flex-col md:flex-row items-start gap-6">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent-green text-white flex items-center justify-center text-xl font-bold">1</div>
-        <div>
-          <h3 class="text-2xl font-semibold mb-2">Connect & Configure</h3>
-          <p class="opacity-90">
-            Link your social accounts, define your brand voice, and set campaign goals in under 5 minutes.
-          </p>
+    <!-- Key Metrics -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div class="bg-gray-800 p-5 rounded-lg shadow text-center border border-gray-700">
+        <div class="text-2xl font-bold text-white">{{
+          totalSignals = 136
+        }}</div>
+        <div class="text-gray-400 text-sm">Total Signals</div>
+      </div>
+      <div class="bg-green-900 p-5 rounded-lg shadow text-center border border-green-700">
+        <div class="text-2xl font-bold text-green-300">{{ yesSignals = 17 }}</div>
+        <div class="text-green-400 text-sm">YES Signals</div>
+      </div>
+      <div class="bg-amber-900 p-5 rounded-lg shadow text-center border border-amber-700">
+        <div class="text-2xl font-bold text-amber-300">{{ holdSignals = 97 }}</div>
+        <div class="text-amber-400 text-sm">HOLD Signals</div>
+      </div>
+      <div class="bg-gray-700 p-5 rounded-lg shadow text-center border border-gray-600">
+        <div class="text-2xl font-bold text-gray-300">{{ monitorSignals = 22 }}</div>
+        <div class="text-gray-400 text-sm">Monitor/Kill</div>
+      </div>
+    </div>
+
+    <!-- Live Probes Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-6 text-center md:text-left">Live Probes <span class="text-green-400">(4)</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Probe Card -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-green-500 transition duration-300">
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-white mb-2">QuickGrant</h3>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-green-400 font-bold">8.3/10</span>
+              <span class="text-gray-400 text-sm">TTD: 14 days</span>
+            </div>
+            <a href="https://gist.github.com/ethanhawkes-gif/ec0ea8b224485bbcbfa516a557248568" target="_blank" class="text-blue-400 hover:underline text-sm flex items-center">
+              View Probe <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Probe Card -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-green-500 transition duration-300">
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-white mb-2">Crisis Compass</h3>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-green-400 font-bold">8/10</span>
+              <span class="text-gray-400 text-sm">TTD: 14 days</span>
+            </div>
+            <a href="https://gist.github.com/ethanhawkes-gif/f89569761a653d18557a0a0b18ce632d" target="_blank" class="text-blue-400 hover:underline text-sm flex items-center">
+              View Probe <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Probe Card -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-green-500 transition duration-300">
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-white mb-2">Dynamic Travel Insurance</h3>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-green-400 font-bold">8/10</span>
+              <span class="text-gray-400 text-sm">TTD: 21 days</span>
+            </div>
+            <a href="https://gist.github.com/ethanhawkes-gif/78658b3b7c9e47dd9a7b7a9fca9e5eb3" target="_blank" class="text-blue-400 hover:underline text-sm flex items-center">
+              View Probe <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Probe Card -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-green-500 transition duration-300">
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-white mb-2">CampaignManager AI</h3>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-green-400 font-bold">8.3/10</span>
+              <span class="text-gray-400 text-sm">TTD: 90 days</span>
+            </div>
+            <a href="https://ethanhawkes-gif.github.io/signalry-experiments/" target="_blank" class="text-blue-400 hover:underline text-sm flex items-center">
+              View Probe <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row items-start gap-6">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent-green text-white flex items-center justify-center text-xl font-bold">2</div>
-        <div>
-          <h3 class="text-2xl font-semibold mb-2">AI Takes Over</h3>
-          <p class="opacity-90">
-            Our AI crafts content, schedules posts, engages followers, and adjusts strategy daily.
-          </p>
-        </div>
-      </div>
-      <div class="flex flex-col md:flex-row items-start gap-6">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent-green text-white flex items-center justify-center text-xl font-bold">3</div>
-        <div>
-          <h3 class="text-2xl font-semibold mb-2">Review & Scale</h3>
-          <p class="opacity-90">
-            Get weekly reports with receipts and insights. Scale what works — automatically.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials -->
-  <section class="px-6 py-16 bg-opacity-50 bg-primary-bg">
-    <div class="max-w-4xl mx-auto space-y-10">
-      <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
-        <p class="italic mb-4">“CampaignManager AI cut our social media workload by 80% while doubling engagement. The transparency logs give me full confidence in every post.”</p>
-        <p class="font-semibold">— Sarah Lin, Marketing Director at TechFlow Inc.</p>
+    <!-- Signal Leaderboard -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-6">Signal Leaderboard <span class="text-green-400">(Top YES Signals)</span></h2>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow border border-gray-700">
+        <table class="min-w-full divide-y divide-gray-700">
+          <thead class="bg-gray-900">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Signal</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">3-Axis Score</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Time-to-Dollar</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-700">
+            <tr class="hover:bg-gray-750 transition duration-150">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="font-medium text-white">CampaignManager AI</div>
+                <div class="text-sm text-gray-400">autonomous social media management for B</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:8</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">90 days</td>
+            </tr>
+            <tr class="hover:bg-gray-750 transition duration-150">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="font-medium text-white">QuickGrant</div>
+                <div class="text-sm text-gray-400">AI-powered grant writing for nonprofits</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:8</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">14 days</td>
+            </tr>
+            <tr class="hover:bg-gray-750 transition duration-150">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="font-medium text-white">Dynamic Travel Insurance</div>
+                <div class="text-sm text-gray-400">AI-powered travel planning and booking</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:7</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">21 days</td>
+            </tr>
+            <tr class="hover:bg-gray-750 transition duration-150">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="font-medium text-white">Audit Trail Tracker</div>
+                <div class="text-sm text-gray-400">AI compliance and regulatory reporting f</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:7</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">45 days</td>
+            </tr>
+            <tr class="hover:bg-gray-750 transition duration-150">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="font-medium text-white">Crisis Compass</div>
+                <div class="text-sm text-gray-400">AI-powered PR and media monitoring for s</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:7</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">14 days</td>
+            </tr>
+            <tr class="hover:bg-gray-750 transition duration-150">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="font-medium text-white">Automated HVAC Management</div>
+                <div class="text-sm text-gray-400">predictive maintenance for commercial re</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:7</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">60 days</td>
+            </tr>
+            <tr class="hover:bg-gray-750 transition duration-150">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="font-medium text-white">Virtual Support Agents</div>
+                <div class="text-sm text-gray-400">autonomous customer support for SaaS com</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-green-400 font-mono text-sm">rev:9 | proto:7 | trust:7</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">20 days</td>
+            </tr>
+            <tr class="hover:bg-gray-750 transition duration-150">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="font-medium text-white">AI-Enhanced Onboarding</div>
+                <div class="text-sm text-gray-400">autonomous customer support for SaaS com</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-green-400 font-mono text-sm">rev:8 | proto:8 | trust:7</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">25 days</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
-        <p class="italic mb-4">“We’ve tested many tools, but this is the first AI that truly acts like a strategic partner. The receipts feature is a game-changer for compliance.”</p>
-        <p class="font-semibold">— Marcus Reed, Head of Growth at ScaleOps</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Email Capture -->
-  <section class="px-6 py-16 bg-opacity-50 bg-primary-bg">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Ready to Automate Your Social Strategy?</h2>
-      <p class="mb-8 opacity-90">Join hundreds of B2B marketers saving 10+ hours a week.</p>
-      <form action="#" class="flex flex-col md:flex-row gap-4 justify-center">
-        <input type="email" placeholder="Your email" required class="px-4 py-3 rounded-lg w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-accent-green"/>
-        <input type="text" placeholder="Company name" required class="px-4 py-3 rounded-lg w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-accent-green"/>
-        <button type="submit" class="px-6 py-3 bg-accent-green hover:bg-green-500 rounded-lg font-semibold transition">
-          Get Started
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="px-6 py-8 text-center border-t border-white border-opacity-10">
-    <p>© 2026 CampaignManager AI. All rights reserved.</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm mt-12 pt-6 border-t border-gray-800">
+      <p>Protocol-primary. Every probe feeds the trust layer. | Powered by <span class="text-blue-400">Covenant Protocol</span></p>
+      <p class="mt-1 text-xs">Verticals covered: 14</p>
+    </footer>
+  </div>
 </body>
 </html>
+```
