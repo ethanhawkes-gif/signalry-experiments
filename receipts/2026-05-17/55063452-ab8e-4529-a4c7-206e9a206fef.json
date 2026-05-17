@@ -1,0 +1,19 @@
+{
+  "receipt_id": "55063452-ab8e-4529-a4c7-206e9a206fef",
+  "version": "1.0",
+  "issued_at": "2026-05-17T10:17:31.548Z",
+  "agent_id": "lumen",
+  "user_id": "ethan",
+  "action": "experiment.signals.generated",
+  "instruction_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "unspecified",
+  "outcome": "17 YES signals identified; 4 deployed as live probes at GitHub Pages",
+  "metadata": {
+    "signals": 136,
+    "yes": 17,
+    "spend_usd": 4.28,
+    "model": "Qwen3-235B"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIC5IFe2INakRkFjT1U9IRM/WunPEOB7V2RDSW+5VgetUAiEA/2f3C5Gs/ryXPefwRBJjb7PKXoVZlnHo0AkjtIoIxTk="
+}
