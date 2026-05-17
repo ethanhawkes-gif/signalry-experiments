@@ -1,0 +1,14 @@
+{
+  "receipt_id": "61adb2a8-a48c-4566-81e4-9fe042a2077f",
+  "version": "1.0",
+  "issued_at": "2026-05-16T16:56:09.586Z",
+  "agent_id": "lumen@signalry-aool",
+  "user_id": "ethan@signalry.ai",
+  "action": "email.send",
+  "instruction_hash": "30560abccb2d29d077e698d40dbd54eaddfb509cb6cf1288d8cd9d2d37a882ba",
+  "scope": "covenant-cohort-1",
+  "outcome": "30 emails sent to compliance/legal/risk executives",
+  "metadata": {},
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEYCIQDbNcib6mccNSTmWWMMeqKhBC5gwwUVR7Qqy1HNmjqsZgIhANAZ+yN1yfkdyeJUnj+rdtXWNppBt8CwR9ozAM2fNtzt"
+}
