@@ -1,0 +1,18 @@
+{
+  "receipt_id": "6f502211-30cf-4c7c-a3cb-f768ed066217",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:21:54.570Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "c90763d7d286071a57eeabe3d1435cc754ec978f50f2df8b3b644454d0f4b964",
+  "scope": "email_compose_and_send",
+  "outcome": "email_sent_successfully",
+  "metadata": {
+    "to": "jteegen@rssc.com",
+    "subject": "Silversea just shipped AI before you",
+    "cohort": "luxury-hospitality-2"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIHSk0r+qb6D63F7uecESk1jR+8ADW0j8lbtD1G4kWRcmAiEAhAgS+0fH72JcG65J9vOxYy9bdpf5B7rXY9wHEO03ikM="
+}
