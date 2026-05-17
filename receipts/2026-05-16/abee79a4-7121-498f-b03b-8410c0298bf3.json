@@ -1,0 +1,19 @@
+{
+  "receipt_id": "abee79a4-7121-498f-b03b-8410c0298bf3",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.807Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "4f2d4262fa8cca5e02d3c161b708c36f1e1bbbd0b5df7c1b28733e0d2729f51b",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "bert.hernandez@silversea.com",
+    "name": "Bert Hernandez",
+    "company": "Silversea Cruises",
+    "subject": "Silversea's AI deployment — the intelligence infrastructure question"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIFpkYVs7QV0pFOMuX4RIHtInokXhUkXuMGREaiDOR27bAiEA2tEBG0W+Eat2juJhc7VIHRD3fV1M4uUEsDlWw8qf+WQ="
+}
