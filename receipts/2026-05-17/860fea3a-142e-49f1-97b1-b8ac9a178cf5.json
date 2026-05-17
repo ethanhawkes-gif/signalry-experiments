@@ -1,0 +1,21 @@
+{
+  "receipt_id": "860fea3a-142e-49f1-97b1-b8ac9a178cf5",
+  "version": "1.0",
+  "issued_at": "2026-05-17T23:40:56.932Z",
+  "agent_id": "lumen",
+  "user_id": "ethan",
+  "action": "test_receipt",
+  "instruction_hash": "ad6b525df25a0c401efef9f786e713b0ca1a4cc68d6d49375877990d03ae89c9",
+  "scope": "test_receipt",
+  "outcome": "completed",
+  "metadata": {
+    "test": true,
+    "timestamp": "2026-05-17T23:40:56.896Z",
+    "source": "auto-receipt-cli-test",
+    "actor": "lumen",
+    "authorized_by": "ethan_2026-05-17",
+    "hmac_integrity": "a53752a9ecb445538dd3c4e0a1a4e7a996ee2b24b6667df4b0d5d50976389436"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEYCIQDy2IqAKym+Y7eSNXTXsjlRJLyHgK38R6WBzNYg4UJw2gIhAMXsyIzTf6LcCddldVf0VS/akmLqTvBmOoBIuCrorY0t"
+}
