@@ -1,0 +1,19 @@
+{
+  "receipt_id": "0a146020-4f6e-427c-bc98-69995d69166d",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.817Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "912a3781fdf545c42ac8e34650afbd3e9208b2a5f43d17f66c5bdc5d4fb10b80",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "humam.sakhnini@discord.com",
+    "name": "Humam Sakhnini",
+    "company": "Discord",
+    "subject": "Reevaluating Signals in the Industry"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEQCIBZQNWVJKsCt6YiDShH1/KNJvbNE26C1iJbXns5/+UzYAiA9zZcCf9FJ3WlClCCMNEPGwPJisKZeMm/ebv8Ub/AbeQ=="
+}
