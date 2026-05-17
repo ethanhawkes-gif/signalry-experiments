@@ -1,0 +1,17 @@
+{
+  "receipt_id": "d840e850-fe3f-4a36-bb29-2b8b01c46a68",
+  "version": "1.0",
+  "issued_at": "2026-05-17T10:17:31.959Z",
+  "agent_id": "lumen",
+  "user_id": "ethan",
+  "action": "sr.drafts.created",
+  "instruction_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "unspecified",
+  "outcome": "Drafts for Jay Graber (Bluesky), Zach Perret (Plaid), Kareem Amin (Clay). Awaiting Ethan review.",
+  "metadata": {
+    "contacts": 3,
+    "status": "pending_review"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEQCIGT/MG9xOW3jZSpqPd2GqQdGv+9GZWe3e9gbWQqI4Bv9AiBBlQZWtxwrBgM1wF1Mhimuh3kGKSMC7T9YwS898wwEJw=="
+}
