@@ -1,0 +1,22 @@
+{
+  "receipt_id": "7d18ac55-3fd5-4b99-94a4-bb4f421e3755",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.650Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "e39c2ffa5c6f7dcd6de07f25899f9afc45439b8f56a86328768f0affb34a2517",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "baiju@aetherflux.com",
+    "name": "Baiju Bhatt",
+    "company": "Aetherflux",
+    "subject": "Rethinking Signals in Aetherflux Strategy",
+    "draft_id": "r7446348911278137669",
+    "message_id": "19e30b68f1ca602e",
+    "sent_at": "2026-05-16T12:15:31.159Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEYCIQCh0xDrCA0mvInVki3z7yswuLjkZ6WKCYBP6auQ2JOSsgIhAKopMRS2qpRQJVMAnS0Bouq9jnQTUMyRIA1uuZypMems"
+}
