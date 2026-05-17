@@ -1,0 +1,22 @@
+{
+  "receipt_id": "bf33bcaa-dc42-4258-b7c0-4e3aa479ea99",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.634Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "f598e3d1d9adc85c488f5847210b85e8dcb851ae61626cb2150ede26372396a5",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "bar@wonderful.ai",
+    "name": "Bar Winkler",
+    "company": "Wonderful",
+    "subject": "Re: Bar — quick follow",
+    "draft_id": "r2145641467079509477",
+    "message_id": "19e30b634479b673",
+    "sent_at": "2026-05-16T12:15:08.575Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEQCIFDv0c227IXzkCYnQGsJMVKo76VxmhtjS03VlfhmyQbiAiBG61ZjWae5sHwSC8k/UhD7GFjHDDDUaUK5zhYTd2ijjQ=="
+}
