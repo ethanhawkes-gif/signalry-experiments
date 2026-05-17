@@ -1,0 +1,19 @@
+{
+  "receipt_id": "8ac8c3bd-179a-441e-b64f-9655b27735e7",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.797Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "a97ce9ad4c45101138a2456978792f29f58cc5e450299b58a5866e4f250ae238",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "jwt@wilcoxind.com",
+    "name": "James Teetzel",
+    "company": "Wilcox Industries",
+    "subject": "Re: James — quick follow"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQC9DbVKxorqblCiBwyX6SV8VS/D2X66wlPIVkHMIXe+QAIgesaP5D3ShsiQB8DahyR8u36+Z8tdxj6wvpXyj7iaJzs="
+}
