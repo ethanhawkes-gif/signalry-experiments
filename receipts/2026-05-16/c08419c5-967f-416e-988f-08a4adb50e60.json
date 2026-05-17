@@ -1,0 +1,22 @@
+{
+  "receipt_id": "c08419c5-967f-416e-988f-08a4adb50e60",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.641Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "eaac5bd12ce44386ecd10ad2c84a46bc8deac9f6fbb2346aa971a9a0f254c0ed",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "nabiha.hadj-hamou@ponant.com",
+    "name": "Nabiha Hadj-Hamou",
+    "company": "Ponant",
+    "subject": "Ponant's expedition positioning — competitive read",
+    "draft_id": "r-7074479050148276412",
+    "message_id": "19e30b655914798f",
+    "sent_at": "2026-05-16T12:15:16.445Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIHsSNktol3TQHnjNXbUS/JltuJERbbgfkoRUju/rHySRAiEAr4EUUro3KMfv8DuGE9ZT0LRWdB0FpZMpLrek0BO9WTk="
+}
