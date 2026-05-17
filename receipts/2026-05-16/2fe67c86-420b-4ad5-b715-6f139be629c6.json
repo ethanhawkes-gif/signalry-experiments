@@ -1,0 +1,19 @@
+{
+  "receipt_id": "2fe67c86-420b-4ad5-b715-6f139be629c6",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.814Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "e84b9a82e0f04074deef7c0dc8de75500320d97c86a6b61d4e24a24dd341ea20",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "dave.ripley@kraken.com",
+    "name": "Dave Ripley",
+    "company": "Kraken",
+    "subject": "Market Shifts: New Opportunity Emerges"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEYCIQCc0fMRga2C6clby3Qbo/USD+TQzLAs+fk+GlQuvmABqAIhAKkOlalQ+W6jCCVPgM11AuXbE48hFDpL0cA5cfwwFu7U"
+}
