@@ -1,0 +1,19 @@
+{
+  "receipt_id": "75b37d89-28da-4ffc-a876-bed4af93c054",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:06.821Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "601d66455ccfa56d1843dd866475a4fc4e5385972d4dc97f7e05e867f6997620",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "jay@blueskyweb.xyz",
+    "name": "Jay Graber",
+    "company": "Bluesky",
+    "subject": "Rethinking Signals in CEO Searches"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIA9VIZYXutvdvLJZnXOO2nvpw8pHMR72pqYNi6JsQ7XEAiEAz1oOn8ypYaY9eMG2s2Wi8GqATWqo/LfR6+G18HJW72Y="
+}
