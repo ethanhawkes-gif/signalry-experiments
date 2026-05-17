@@ -1,0 +1,22 @@
+{
+  "receipt_id": "396cbc81-a79f-4573-b951-82c467e95877",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.628Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "30bfcc096b51b488274bf1581a2f28ae35a93bdde964082b6d9ff74fe8dd5fc1",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "cameron@unnaturalproducts.com",
+    "name": "Cameron Pye",
+    "company": "Unnatural Products",
+    "subject": "Re: Cameron — quick follow",
+    "draft_id": "r-8845687988281135471",
+    "message_id": "19e30b6232528038",
+    "sent_at": "2026-05-16T12:15:03.573Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQDnwyPLeFwSTUiKemiL3q4KFeWmyhDUqKa8hoXKedffmAIgMZ/onJRHrSuMvja1oNMvxTpGX2KWFY8ND8wkUOWmTVE="
+}
