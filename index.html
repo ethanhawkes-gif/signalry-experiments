@@ -1,224 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Signalry Experiment Factory</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signalry Experiment Factory — Live Scoreboard</title>
+<script defer data-domain="signalry-experiments.pages.dev" src="https://plausible.io/js/script.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #e8e8e8; padding: 2rem; }
+  h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+  .subtitle { color: #888; font-size: 0.9rem; margin-bottom: 2rem; }
+  .stats { display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+  .stat { background: #141414; border: 1px solid #222; padding: 1rem 1.5rem; border-radius: 8px; }
+  .stat .number { font-size: 2rem; font-weight: 700; color: #00ff88; }
+  .stat .label { font-size: 0.8rem; color: #888; margin-top: 0.2rem; }
+  .live-probes { margin-bottom: 2rem; }
+  .live-probes h2 { font-size: 1.1rem; margin-bottom: 1rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+  .probe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+  .probe-card { background: #141414; border: 1px solid #222; padding: 1.25rem; border-radius: 8px; }
+  .probe-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+  .probe-card a { color: #4af; font-size: 0.8rem; text-decoration: none; }
+  .probe-card a:hover { text-decoration: underline; }
+  .badge { display: inline-block; padding: 0.2em 0.6em; border-radius: 4px; font-size: 0.7rem; font-weight: 600; background: #00ff8822; color: #00ff88; border: 1px solid #00ff8844; margin-bottom: 0.5rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { text-align: left; padding: 0.6rem 0.8rem; color: #888; font-weight: 500; border-bottom: 1px solid #222; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #1a1a1a; }
+  tr:hover td { background: #141414; }
+  .section-title { font-size: 1.1rem; margin: 2rem 0 1rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+  .updated { color: #555; font-size: 0.75rem; margin-top: 2rem; }
+</style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen font-sans">
-  <div class="container mx-auto px-4 py-8">
+<body>
+<h1>🧪 Signalry Experiment Factory</h1>
+<p class="subtitle">Live signal registry — protocol-primary, portfolio-operated</p>
 
-    <!-- Header -->
-    <header class="text-center mb-10">
-      <h1 class="text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-2">
-        Signalry Experiment Factory
-      </h1>
-      <p class="text-gray-400 text-sm">Built: 2026-05-17 10:11 UTC</p>
-      <div class="flex items-center justify-center mt-2 text-green-400 space-x-2">
-        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-        <span class="text-xs uppercase tracking-wider">Live — auto-updating</span>
-      </div>
-    </header>
+<div class="stats">
+  <div class="stat"><div class="number">136</div><div class="label">Signals Scored</div></div>
+  <div class="stat"><div class="number">17</div><div class="label">YES Threshold</div></div>
+  <div class="stat"><div class="number">97</div><div class="label">HOLD</div></div>
+  <div class="stat"><div class="number">4</div><div class="label">Live Probes</div></div>
+</div>
 
-    <!-- Spend Metric -->
-    <div class="flex justify-center mb-8">
-      <div class="bg-gray-800 rounded-lg px-6 py-3 shadow-lg border border-gray-700">
-        <span class="text-gray-300 text-sm">Spend to date:</span>
-        <span class="text-green-400 font-bold text-lg ml-2">$4.28</span>
-        <span class="text-gray-500 text-sm"> / $1,000 credit</span>
-      </div>
-    </div>
-
-    <!-- Key Metrics -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-      <div class="bg-gray-800 p-5 rounded-lg shadow text-center border border-gray-700">
-        <div class="text-2xl font-bold text-white">{{
-          totalSignals = 136
-        }}</div>
-        <div class="text-gray-400 text-sm">Total Signals</div>
-      </div>
-      <div class="bg-green-900 p-5 rounded-lg shadow text-center border border-green-700">
-        <div class="text-2xl font-bold text-green-300">{{ yesSignals = 17 }}</div>
-        <div class="text-green-400 text-sm">YES Signals</div>
-      </div>
-      <div class="bg-amber-900 p-5 rounded-lg shadow text-center border border-amber-700">
-        <div class="text-2xl font-bold text-amber-300">{{ holdSignals = 97 }}</div>
-        <div class="text-amber-400 text-sm">HOLD Signals</div>
-      </div>
-      <div class="bg-gray-700 p-5 rounded-lg shadow text-center border border-gray-600">
-        <div class="text-2xl font-bold text-gray-300">{{ monitorSignals = 22 }}</div>
-        <div class="text-gray-400 text-sm">Monitor/Kill</div>
-      </div>
-    </div>
-
-    <!-- Live Probes Section -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-6 text-center md:text-left">Live Probes <span class="text-green-400">(4)</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Probe Card -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-green-500 transition duration-300">
-          <div class="p-5">
-            <h3 class="text-lg font-bold text-white mb-2">QuickGrant</h3>
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-green-400 font-bold">8.3/10</span>
-              <span class="text-gray-400 text-sm">TTD: 14 days</span>
-            </div>
-            <a href="https://gist.github.com/ethanhawkes-gif/ec0ea8b224485bbcbfa516a557248568" target="_blank" class="text-blue-400 hover:underline text-sm flex items-center">
-              View Probe <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Probe Card -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-green-500 transition duration-300">
-          <div class="p-5">
-            <h3 class="text-lg font-bold text-white mb-2">Crisis Compass</h3>
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-green-400 font-bold">8/10</span>
-              <span class="text-gray-400 text-sm">TTD: 14 days</span>
-            </div>
-            <a href="https://gist.github.com/ethanhawkes-gif/f89569761a653d18557a0a0b18ce632d" target="_blank" class="text-blue-400 hover:underline text-sm flex items-center">
-              View Probe <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Probe Card -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-green-500 transition duration-300">
-          <div class="p-5">
-            <h3 class="text-lg font-bold text-white mb-2">Dynamic Travel Insurance</h3>
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-green-400 font-bold">8/10</span>
-              <span class="text-gray-400 text-sm">TTD: 21 days</span>
-            </div>
-            <a href="https://gist.github.com/ethanhawkes-gif/78658b3b7c9e47dd9a7b7a9fca9e5eb3" target="_blank" class="text-blue-400 hover:underline text-sm flex items-center">
-              View Probe <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Probe Card -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-green-500 transition duration-300">
-          <div class="p-5">
-            <h3 class="text-lg font-bold text-white mb-2">CampaignManager AI</h3>
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-green-400 font-bold">8.3/10</span>
-              <span class="text-gray-400 text-sm">TTD: 90 days</span>
-            </div>
-            <a href="https://ethanhawkes-gif.github.io/signalry-experiments/" target="_blank" class="text-blue-400 hover:underline text-sm flex items-center">
-              View Probe <i class="fas fa-external-link-alt ml-1 text-xs"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Signal Leaderboard -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-6">Signal Leaderboard <span class="text-green-400">(Top YES Signals)</span></h2>
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow border border-gray-700">
-        <table class="min-w-full divide-y divide-gray-700">
-          <thead class="bg-gray-900">
-            <tr>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Signal</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">3-Axis Score</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Time-to-Dollar</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-700">
-            <tr class="hover:bg-gray-750 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="font-medium text-white">CampaignManager AI</div>
-                <div class="text-sm text-gray-400">autonomous social media management for B</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:8</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">90 days</td>
-            </tr>
-            <tr class="hover:bg-gray-750 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="font-medium text-white">QuickGrant</div>
-                <div class="text-sm text-gray-400">AI-powered grant writing for nonprofits</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:8</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">14 days</td>
-            </tr>
-            <tr class="hover:bg-gray-750 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="font-medium text-white">Dynamic Travel Insurance</div>
-                <div class="text-sm text-gray-400">AI-powered travel planning and booking</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:7</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">21 days</td>
-            </tr>
-            <tr class="hover:bg-gray-750 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="font-medium text-white">Audit Trail Tracker</div>
-                <div class="text-sm text-gray-400">AI compliance and regulatory reporting f</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:7</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">45 days</td>
-            </tr>
-            <tr class="hover:bg-gray-750 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="font-medium text-white">Crisis Compass</div>
-                <div class="text-sm text-gray-400">AI-powered PR and media monitoring for s</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:7</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">14 days</td>
-            </tr>
-            <tr class="hover:bg-gray-750 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="font-medium text-white">Automated HVAC Management</div>
-                <div class="text-sm text-gray-400">predictive maintenance for commercial re</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-green-400 font-mono text-sm">rev:9 | proto:8 | trust:7</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">60 days</td>
-            </tr>
-            <tr class="hover:bg-gray-750 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="font-medium text-white">Virtual Support Agents</div>
-                <div class="text-sm text-gray-400">autonomous customer support for SaaS com</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-green-400 font-mono text-sm">rev:9 | proto:7 | trust:7</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">20 days</td>
-            </tr>
-            <tr class="hover:bg-gray-750 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="font-medium text-white">AI-Enhanced Onboarding</div>
-                <div class="text-sm text-gray-400">autonomous customer support for SaaS com</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-green-400 font-mono text-sm">rev:8 | proto:8 | trust:7</div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-400">25 days</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center text-gray-500 text-sm mt-12 pt-6 border-t border-gray-800">
-      <p>Protocol-primary. Every probe feeds the trust layer. | Powered by <span class="text-blue-400">Covenant Protocol</span></p>
-      <p class="mt-1 text-xs">Verticals covered: 14</p>
-    </footer>
+<div class="live-probes">
+<h2 class="section-title">Live Probes</h2>
+<div class="probe-grid">
+  <div class="probe-card">
+    <span class="badge">LIVE</span>
+    <h3>QuickGrant</h3>
+    <p style="color:#888;font-size:0.8rem;margin-bottom:0.5rem">AI-powered grant writing for nonprofits</p>
+    <a href="https://htmlpreview.github.io/?https://gist.github.com/ethanhawkes-gif/ec0ea8b224485bbcbfa516a557248568" target="_blank">View probe →</a>
   </div>
+  <div class="probe-card">
+    <span class="badge">LIVE</span>
+    <h3>Crisis Compass</h3>
+    <p style="color:#888;font-size:0.8rem;margin-bottom:0.5rem">AI-powered PR monitoring for startups</p>
+    <a href="https://htmlpreview.github.io/?https://gist.github.com/ethanhawkes-gif/f89569761a653d18557a0a0b18ce632d" target="_blank">View probe →</a>
+  </div>
+  <div class="probe-card">
+    <span class="badge">LIVE</span>
+    <h3>Dynamic Travel Insurance</h3>
+    <p style="color:#888;font-size:0.8rem;margin-bottom:0.5rem">AI risk pricing for travelers</p>
+    <a href="https://htmlpreview.github.io/?https://gist.github.com/ethanhawkes-gif/78658b3b7c9e47dd9a7b7a9fca9e5eb3" target="_blank">View probe →</a>
+  </div>
+  <div class="probe-card">
+    <span class="badge">LIVE</span>
+    <h3>CampaignManager AI</h3>
+    <p style="color:#888;font-size:0.8rem;margin-bottom:0.5rem">Autonomous B2B social media management</p>
+    <a href="https://ethanhawkes-gif.github.io/signalry-experiments/" target="_blank">View probe →</a>
+  </div>
+</div>
+</div>
+
+<h2 class="section-title">YES Threshold (17 signals)</h2>
+<table>
+<thead><tr><th>Signal</th><th>Vertical</th><th>Revenue</th><th>Protocol</th><th>Trust</th><th>Avg</th><th>TTD</th></tr></thead>
+<tbody>
+  <tr>
+    <td><strong>CampaignManager AI</strong></td>
+    <td>autonomous social media management for B2B companies</td>
+    <td>9/10</td>
+    <td>8/10</td>
+    <td>8/10</td>
+    <td><strong>8.3</strong></td>
+    <td>90 days</td>
+  </tr>
+  <tr>
+    <td><strong>QuickGrant</strong></td>
+    <td>AI powered grant writing for nonprofits</td>
+    <td>9/10</td>
+    <td>8/10</td>
+    <td>8/10</td>
+    <td><strong>8.3</strong></td>
+    <td>14 days</td>
+  </tr>
+  <tr>
+    <td><strong>Dynamic Travel Insurance</strong></td>
+    <td>AI powered travel planning and booking</td>
+    <td>9/10</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td><strong>8.0</strong></td>
+    <td>21 days</td>
+  </tr>
+  <tr>
+    <td><strong>Audit Trail Tracker</strong></td>
+    <td>AI compliance and regulatory reporting for financial services</td>
+    <td>9/10</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td><strong>8.0</strong></td>
+    <td>45 days</td>
+  </tr>
+  <tr>
+    <td><strong>Crisis Compass</strong></td>
+    <td>AI powered PR and media monitoring for startups</td>
+    <td>9/10</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td><strong>8.0</strong></td>
+    <td>14 days</td>
+  </tr>
+  <tr>
+    <td><strong>Automated HVAC Management</strong></td>
+    <td>predictive maintenance for commercial real estate</td>
+    <td>9/10</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td><strong>8.0</strong></td>
+    <td>60 days</td>
+  </tr>
+  <tr>
+    <td><strong>Virtual Support Agents</strong></td>
+    <td>autonomous customer support for SaaS companies</td>
+    <td>9/10</td>
+    <td>7/10</td>
+    <td>7/10</td>
+    <td><strong>7.7</strong></td>
+    <td>20 days</td>
+  </tr>
+  <tr>
+    <td><strong>AI-Enhanced Onboarding</strong></td>
+    <td>autonomous customer support for SaaS companies</td>
+    <td>8/10</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td><strong>7.7</strong></td>
+    <td>25 days</td>
+  </tr>
+  <tr>
+    <td><strong>Launch Radar</strong></td>
+    <td>AI powered PR and media monitoring for startups</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td>8/10</td>
+    <td><strong>7.7</strong></td>
+    <td>18 days</td>
+  </tr>
+  <tr>
+    <td><strong>Travel Chatbot Concierge</strong></td>
+    <td>AI powered travel planning and booking</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td>7/10</td>
+    <td><strong>7.3</strong></td>
+    <td>30 days</td>
+  </tr>
+  <tr>
+    <td><strong>TrustChain Ledger</strong></td>
+    <td>AI agent authorization and audit infrastructure for enterprises</td>
+    <td>7/10</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td><strong>7.3</strong></td>
+    <td>14 days</td>
+  </tr>
+  <tr>
+    <td><strong>EthicsWatch Framework</strong></td>
+    <td>AI agent authorization and audit infrastructure for enterprises</td>
+    <td>7/10</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td><strong>7.3</strong></td>
+    <td>45 days</td>
+  </tr>
+  <tr>
+    <td><strong>Diversity Hiring AI</strong></td>
+    <td>AI hiring and interview automation for SMBs</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td>7/10</td>
+    <td><strong>7.3</strong></td>
+    <td>30 days</td>
+  </tr>
+  <tr>
+    <td><strong>Document Verification Pro</strong></td>
+    <td>AI compliance and regulatory reporting for financial services</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td>7/10</td>
+    <td><strong>7.3</strong></td>
+    <td>60 days</td>
+  </tr>
+  <tr>
+    <td><strong>InsightPulse AI</strong></td>
+    <td>autonomous social media management for B2B companies</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td>7/10</td>
+    <td><strong>7.3</strong></td>
+    <td>60 days</td>
+  </tr>
+  <tr>
+    <td><strong>GrantComparative</strong></td>
+    <td>AI powered grant writing for nonprofits</td>
+    <td>7/10</td>
+    <td>7/10</td>
+    <td>8/10</td>
+    <td><strong>7.3</strong></td>
+    <td>40 days</td>
+  </tr>
+  <tr>
+    <td><strong>StoryScout</strong></td>
+    <td>AI powered PR and media monitoring for startups</td>
+    <td>8/10</td>
+    <td>7/10</td>
+    <td>7/10</td>
+    <td><strong>7.3</strong></td>
+    <td>15 days</td>
+  </tr></tbody>
+</table>
+
+<p class="updated">Updated: 2026-05-17T20:12:47.367Z · 136 signals across 14 verticals · Protocol-primary scoring</p>
 </body>
 </html>
-```
