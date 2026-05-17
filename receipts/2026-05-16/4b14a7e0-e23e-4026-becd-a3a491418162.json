@@ -1,0 +1,18 @@
+{
+  "receipt_id": "4b14a7e0-e23e-4026-becd-a3a491418162",
+  "version": "1.0",
+  "issued_at": "2026-05-16T16:52:08.186Z",
+  "agent_id": "lumen@signalry-aool",
+  "user_id": "ethan@signalry.ai",
+  "action": "sent_outreach_emails",
+  "instruction_hash": "f6e34a12a8decc549db11c15ee38eecd2f06fbb36cee709efd5ebdadce645a65",
+  "scope": "signalry/covenant/outreach",
+  "outcome": "30 emails delivered to compliance/legal executives 2026-05-16",
+  "metadata": {
+    "email_count": 30,
+    "campaign": "covenant-outreach-2026-05-16",
+    "target_persona": "compliance/legal executives"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQD2JgRSRSzCuqZDB8xlvUN1u8106W/AJElR44LjXV3EzgIgWEUcbvda+FmjsEbDUKzZ9du/okL69pzsNhQb7jIItLI="
+}
