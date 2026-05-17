@@ -1,0 +1,19 @@
+{
+  "receipt_id": "5e953a3d-25c7-470e-8ef8-3ebbbcbbc3c0",
+  "version": "1.0",
+  "issued_at": "2026-05-17T10:17:32.161Z",
+  "agent_id": "lumen",
+  "user_id": "ethan",
+  "action": "kalshi.exit.placed",
+  "instruction_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "unspecified",
+  "outcome": "Order bf7efddc resting. Position entered at ~$0.64 avg; current bid $0.30.",
+  "metadata": {
+    "ticker": "KXAISPIKE-27-1550",
+    "qty": 280,
+    "price": 0.31,
+    "order_id": "bf7efddc"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEUCIQCSMYoqrxyzCmtdGSXsW1BDeN5tad3ktlrpw+63AfUTkAIgUID+X+LO5yzgcif6RzTWb6S4o7HKJuZY4V0LJi+VVLY="
+}
