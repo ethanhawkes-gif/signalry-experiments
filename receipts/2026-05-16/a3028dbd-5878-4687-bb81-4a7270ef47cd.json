@@ -1,0 +1,22 @@
+{
+  "receipt_id": "a3028dbd-5878-4687-bb81-4a7270ef47cd",
+  "version": "1.0",
+  "issued_at": "2026-05-16T12:22:59.652Z",
+  "agent_id": "lumen-v1",
+  "user_id": "ethan-hawkes",
+  "action": "email_sent",
+  "instruction_hash": "26abcd6bfe26b997b913ede8508662e5aff966c606519b80b4c4ea99b0d2febf",
+  "scope": "email_compose_and_send",
+  "outcome": "sent",
+  "metadata": {
+    "to": "jon.zuo@1-act.com",
+    "name": "Jon Zuo",
+    "company": "Advanced Cooling Technologies",
+    "subject": "Rethinking Industry Signals Together?",
+    "draft_id": "r-3120353198768093774",
+    "message_id": "19e30b69bfe231df",
+    "sent_at": "2026-05-16T12:15:34.559Z"
+  },
+  "public_key_id": "covenant-p256-v1",
+  "signature": "MEYCIQDooo2Q1pGeYO2RA6OW0B8NWpLhR8PQjZALbuJgCO3i9QIhAJVRHePg6QVIvRbaBt/uXkl6oMK/BQKWiyPW9wqXK8bS"
+}
