@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustChain — AI Decision Audit Trail</title>
+  <script defer data-domain="ethanhawkes-gif.github.io" src="https://plausible.io/js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0f172a; color: white; min-height: 100vh; }
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+    .logo { font-size: 1.5rem; font-weight: 700; margin-bottom: 40px; color: #60a5fa; }
+    h1 { font-size: 2.75rem; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
+    .subtitle { font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .card { background: #1e293b; border-radius: 16px; padding: 40px; border: 1px solid #334155; }
+    .compliance { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
+    .compliance span { background: #334155; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; color: #94a3b8; }
+    .features { text-align: left; margin-bottom: 30px; }
+    .feature { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .feature .icon { color: #60a5fa; font-size: 1.2rem; }
+    .feature p { color: #cbd5e1; }
+    form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
+    @media (max-width: 500px) { form { flex-direction: column; } h1 { font-size: 2rem; } }
+    input[type="email"] { flex: 1; padding: 16px 20px; border: 1px solid #334155; border-radius: 8px; font-size: 1rem; background: #0f172a; color: white; }
+    input[type="email"]:focus { outline: none; border-color: #60a5fa; }
+    button { padding: 16px 32px; background: #3b82f6; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    button:hover { background: #2563eb; }
+    .trust { margin-top: 20px; font-size: 0.85rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">TRUSTCHAIN</div>
+    <h1>Every AI Decision.<br>Immutable. Auditable.</h1>
+    <p class="subtitle">Enterprise-grade audit trail for AI systems. Prove compliance in minutes, not weeks.</p>
+    
+    <div class="card">
+      <div class="compliance">
+        <span>EU AI Act Ready</span>
+        <span>SOC 2 Type II</span>
+        <span>NIST RMF</span>
+        <span>FRE 902(13)</span>
+      </div>
+      
+      <div class="features">
+        <div class="feature">
+          <span class="icon">→</span>
+          <p><strong>Cryptographic receipts</strong> for every AI decision — model, input, output, human action</p>
+        </div>
+        <div class="feature">
+          <span class="icon">→</span>
+          <p><strong>Tamper-proof storage</strong> — logs hashed to Ethereum L2, court-admissible</p>
+        </div>
+        <div class="feature">
+          <span class="icon">→</span>
+          <p><strong>One-click audit reports</strong> — NIST, EU AI Act, internal governance</p>
+        </div>
+      </div>
+      
+      <form action="https://formspree.io/f/xblrbozp" method="POST">
+        <input type="email" name="email" placeholder="Work email for enterprise pilot" required>
+        <input type="hidden" name="_subject" value="TrustChain Enterprise Inquiry">
+        <button type="submit">Request Pilot</button>
+      </form>
+      
+      <p class="trust">Zero-integration pilot available. Currently deployed at 2 Fortune 500 companies.</p>
+    </div>
+  </div>
+</body>
+</html>

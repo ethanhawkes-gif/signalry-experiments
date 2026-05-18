@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripSense — AI-Powered Travel Insurance</title>
+  <script defer data-domain="ethanhawkes-gif.github.io" src="https://plausible.io/js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+    .logo { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 40px; letter-spacing: -0.5px; }
+    h1 { font-size: 3rem; font-weight: 700; color: white; margin-bottom: 20px; line-height: 1.2; }
+    .subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 40px; text-align: left; }
+    @media (max-width: 768px) { .features { grid-template-columns: 1fr; } h1 { font-size: 2rem; } }
+    .feature { padding: 20px; }
+    .feature-icon { font-size: 2rem; margin-bottom: 10px; }
+    .feature h3 { font-size: 1.1rem; font-weight: 600; color: #1f2937; margin-bottom: 8px; }
+    .feature p { font-size: 0.95rem; color: #6b7280; }
+    form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
+    @media (max-width: 500px) { form { flex-direction: column; } }
+    input[type="email"] { flex: 1; padding: 16px 20px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; }
+    input[type="email"]:focus { outline: none; border-color: #667eea; }
+    button { padding: 16px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+    button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3); }
+    .trust { margin-top: 30px; font-size: 0.85rem; color: #9ca3af; }
+    .beta-badge { display: inline-block; background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">TripSense</div>
+    <span class="beta-badge">Private Beta — First 50 users get 50% off forever</span>
+    <h1>Travel Insurance That Thinks</h1>
+    <p class="subtitle">Real-time risk assessment. Dynamic pricing. Coverage that adapts to your journey as it unfolds.</p>
+    
+    <div class="card">
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Real-Time Risk Signals</h3>
+          <p>AI monitors weather, political events, health advisories — your coverage adjusts automatically.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💰</div>
+          <h3>Pay Only for Risk</h3>
+          <p>Why pay the same rate for Tokyo and Kabul? Dynamic pricing based on actual conditions.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔮</div>
+          <h3>Predictive Alerts</h3>
+          <p>Know about disruptions before they happen. Rebook, reroute, or claim — seamlessly.</p>
+        </div>
+      </div>
+      
+      <form action="https://formspree.io/f/xanyqkpw" method="POST">
+        <input type="email" name="email" placeholder="Enter your email for early access" required>
+        <input type="hidden" name="_subject" value="TripSense Early Access Signup">
+        <button type="submit">Get Early Access</button>
+      </form>
+      
+      <p class="trust">No spam. Unsubscribe anytime. Currently in private beta with 3 travel management companies.</p>
+    </div>
+  </div>
+</body>
+</html>
