@@ -20,20 +20,28 @@
     .feature-icon { font-size: 2rem; margin-bottom: 10px; }
     .feature h3 { font-size: 1.1rem; font-weight: 600; color: #1f2937; margin-bottom: 8px; }
     .feature p { font-size: 0.95rem; color: #6b7280; }
+    .cta-section { margin-top: 30px; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .btn { padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3); }
+    .btn-secondary { background: white; color: #667eea; border: 2px solid #667eea; }
+    .btn-secondary:hover { background: #f0f4ff; }
     form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
-    @media (max-width: 500px) { form { flex-direction: column; } }
+    @media (max-width: 500px) { form { flex-direction: column; } .cta-buttons { flex-direction: column; } }
     input[type="email"] { flex: 1; padding: 16px 20px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; }
     input[type="email"]:focus { outline: none; border-color: #667eea; }
-    button { padding: 16px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-    button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3); }
-    .trust { margin-top: 30px; font-size: 0.85rem; color: #9ca3af; }
+    button { padding: 16px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .trust { margin-top: 20px; font-size: 0.85rem; color: #9ca3af; }
     .beta-badge { display: inline-block; background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; }
+    .price-tag { background: #fef3c7; color: #92400e; padding: 8px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+    .strike { text-decoration: line-through; opacity: 0.6; }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="logo">TripSense</div>
-    <span class="beta-badge">Private Beta — First 50 users get 50% off forever</span>
+    <span class="beta-badge">🚀 Founding Member Offer — Limited to first 50</span>
     <h1>Travel Insurance That Thinks</h1>
     <p class="subtitle">Real-time risk assessment. Dynamic pricing. Coverage that adapts to your journey as it unfolds.</p>
     
@@ -56,13 +64,23 @@
         </div>
       </div>
       
-      <form action="https://formspree.io/f/xanyqkpw" method="POST">
-        <input type="email" name="email" placeholder="Enter your email for early access" required>
-        <input type="hidden" name="_subject" value="TripSense Early Access Signup">
-        <button type="submit">Get Early Access</button>
-      </form>
+      <div class="cta-section">
+        <div class="price-tag"><span class="strike">$199/year</span> → $99/year (Founding Members)</div>
+        
+        <div class="cta-buttons">
+          <a href="https://buy.stripe.com/5kQ00b27I3gqa1PgmL3VC04" class="btn btn-primary">Become a Founding Member — $99/year</a>
+        </div>
+        
+        <p style="margin: 20px 0; color: #6b7280;">or join the free waitlist:</p>
+        
+        <form action="https://formspree.io/f/xanyqkpw" method="POST">
+          <input type="email" name="email" placeholder="Enter your email for updates" required>
+          <input type="hidden" name="_subject" value="TripSense Waitlist Signup">
+          <button type="submit">Join Waitlist</button>
+        </form>
+      </div>
       
-      <p class="trust">No spam. Unsubscribe anytime. Currently in private beta with 3 travel management companies.</p>
+      <p class="trust">30-day money-back guarantee. Cancel anytime. Currently in private beta with 3 travel management companies.</p>
     </div>
   </div>
 </body>
