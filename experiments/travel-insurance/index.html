@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TripSense — AI-Powered Travel Insurance</title>
   <script defer data-domain="ethanhawkes-gif.github.io" src="https://plausible.io/js/script.js"></script>
+  <script src="/ab-test.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,24 +26,21 @@
     .btn { padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; }
     .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3); }
-    .btn-secondary { background: white; color: #667eea; border: 2px solid #667eea; }
-    .btn-secondary:hover { background: #f0f4ff; }
     form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
     @media (max-width: 500px) { form { flex-direction: column; } .cta-buttons { flex-direction: column; } }
     input[type="email"] { flex: 1; padding: 16px 20px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; }
-    input[type="email"]:focus { outline: none; border-color: #667eea; }
     button { padding: 16px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
     .trust { margin-top: 20px; font-size: 0.85rem; color: #9ca3af; }
     .beta-badge { display: inline-block; background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; }
     .price-tag { background: #fef3c7; color: #92400e; padding: 8px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
-    .strike { text-decoration: line-through; opacity: 0.6; }
+    .variant-indicator { position: fixed; bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 8px; font-size: 10px; border-radius: 4px; }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="logo">TripSense</div>
     <span class="beta-badge">🚀 Founding Member Offer — Limited to first 50</span>
-    <h1>Travel Insurance That Thinks</h1>
+    <h1 id="main-headline">Travel Insurance That Thinks</h1>
     <p class="subtitle">Real-time risk assessment. Dynamic pricing. Coverage that adapts to your journey as it unfolds.</p>
     
     <div class="card">
@@ -65,17 +63,18 @@
       </div>
       
       <div class="cta-section">
-        <div class="price-tag"><span class="strike">$199/year</span> → $99/year (Founding Members)</div>
+        <div class="price-tag" id="price-display"><span class="strike">$199/year</span> → $99/year (Founding Members)</div>
         
         <div class="cta-buttons">
-          <a href="https://buy.stripe.com/fZu4gr4fQ8AK5LzgmL3VC08" class="btn btn-primary">Start 14-Day Free Trial — $99/year</a>
+          <a href="https://buy.stripe.com/fZu4gr4fQ8AK5LzgmL3VC08" class="btn btn-primary" id="main-cta" onclick="ABTest.track('cta_click', {})">Start 14-Day Free Trial</a>
         </div>
         
         <p style="margin: 20px 0; color: #6b7280;">or join the free waitlist:</p>
         
-        <form action="https://formspree.io/f/xanyqkpw" method="POST">
+        <form action="https://formspree.io/f/xanyqkpw" method="POST" onsubmit="ABTest.track('form_submit', {})">
           <input type="email" name="email" placeholder="Enter your email for updates" required>
           <input type="hidden" name="_subject" value="TripSense Waitlist Signup">
+          <input type="hidden" name="variant" id="variant-field" value="">
           <button type="submit">Join Waitlist</button>
         </form>
       </div>
@@ -83,5 +82,31 @@
       <p class="trust">30-day money-back guarantee. Cancel anytime. Currently in private beta with 3 travel management companies.</p>
     </div>
   </div>
+  
+  <div class="variant-indicator" id="variant-badge"></div>
+  
+  <script>
+    // A/B Test Configuration
+    const variant = ABTest.init('tripsense', ['A', 'B', 'C'], {
+      'A': {
+        headline: 'Travel Insurance That Thinks',
+        cta: 'Start 14-Day Free Trial',
+        price: '<span class="strike">$199/year</span> → $99/year after trial'
+      },
+      'B': {
+        headline: 'Stop Overpaying for Travel Insurance',
+        cta: 'Get Protected — $99/year',
+        price: '$99/year — 30-day money-back guarantee'
+      },
+      'C': {
+        headline: 'AI-Powered Travel Protection',
+        cta: 'Join Beta — $49/year for Founders',
+        price: 'Founding member price: $49/year (50 spots left)'
+      }
+    });
+    
+    document.getElementById('variant-field').value = variant;
+    document.getElementById('variant-badge').textContent = 'v:' + variant;
+  </script>
 </body>
 </html>
