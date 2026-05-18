@@ -19,12 +19,15 @@
     .use-case { background: #fef9c3; padding: 20px; border-radius: 12px; }
     .use-case h3 { font-size: 1rem; font-weight: 600; color: #854d0e; margin-bottom: 8px; }
     .use-case p { font-size: 0.9rem; color: #713f12; }
+    .price-tag { background: #fef3c7; color: #92400e; padding: 12px 24px; border-radius: 8px; font-size: 1.1rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .btn { padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
+    .btn-primary { background: #eab308; color: #1f2937; }
+    .btn-primary:hover { background: #ca8a04; }
     form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
-    @media (max-width: 500px) { form { flex-direction: column; } }
+    @media (max-width: 500px) { form { flex-direction: column; } .cta-buttons { flex-direction: column; } }
     input[type="email"] { flex: 1; padding: 16px 20px; border: 2px solid #fde047; border-radius: 8px; font-size: 1rem; }
-    input[type="email"]:focus { outline: none; border-color: #eab308; }
     button { padding: 16px 32px; background: #eab308; color: #1f2937; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
-    button:hover { background: #ca8a04; }
     .trust { margin-top: 20px; font-size: 0.85rem; color: #9ca3af; }
   </style>
 </head>
@@ -54,13 +57,21 @@
         </div>
       </div>
       
+      <div class="price-tag">$499/month • 14-day free trial</div>
+      
+      <div class="cta-buttons">
+        <a href="https://buy.stripe.com/fZu3cnaEe9EO3Dr2vV3VC07" class="btn btn-primary">Start Free Trial</a>
+      </div>
+      
+      <p style="margin: 20px 0; color: #6b7280;">or join the waitlist:</p>
+      
       <form action="https://formspree.io/f/xpwzjpkw" method="POST">
         <input type="email" name="email" placeholder="Work email for early access" required>
         <input type="hidden" name="_subject" value="EthicsWatch Early Access">
         <button type="submit">Join Waitlist</button>
       </form>
       
-      <p class="trust">Built by former AI governance leads from Meta and Google.</p>
+      <p class="trust">Cancel anytime. Built by former AI governance leads from Meta and Google.</p>
     </div>
   </div>
 </body>

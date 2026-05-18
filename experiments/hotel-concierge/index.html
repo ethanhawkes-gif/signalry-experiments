@@ -22,20 +22,24 @@
     .pain-point { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
     .pain-point .icon { font-size: 1.2rem; }
     .pain-point p { color: #4b5563; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .btn { padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
+    .btn-primary { background: #059669; color: white; }
+    .btn-primary:hover { background: #047857; }
     form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
-    @media (max-width: 500px) { form { flex-direction: column; } h1 { font-size: 2rem; } }
+    @media (max-width: 500px) { form { flex-direction: column; } h1 { font-size: 2rem; } .cta-buttons { flex-direction: column; } }
     input[type="email"] { flex: 1; padding: 16px 20px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; }
-    input[type="email"]:focus { outline: none; border-color: #059669; }
-    button { padding: 16px 32px; background: #059669; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
-    button:hover { background: #047857; transform: translateY(-2px); }
+    button { padding: 16px 32px; background: #059669; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
     .trust { margin-top: 20px; font-size: 0.85rem; color: #9ca3af; }
     .badge { display: inline-block; background: #ecfdf5; color: #059669; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; }
+    .price-tag { background: #fef3c7; color: #92400e; padding: 8px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+    .strike { text-decoration: line-through; opacity: 0.6; }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="logo">GuestPulse</div>
-    <span class="badge">🎯 Built for hotels with 20-150 rooms</span>
+    <span class="badge">🏨 Built for hotels with 20-150 rooms • First month free</span>
     <h1>Your Front Desk is Understaffed.<br>Your Guests Don't Have to Know.</h1>
     <p class="subtitle">AI-powered guest messaging that handles check-in, local recommendations, and requests — so your team can focus on moments that matter.</p>
     
@@ -51,7 +55,7 @@
         </div>
         <div class="stat">
           <div class="stat-number">$299</div>
-          <div class="stat-label">/month — no per-message fees</div>
+          <div class="stat-label">/month • no per-message fees</div>
         </div>
       </div>
       
@@ -70,13 +74,21 @@
         </div>
       </div>
       
+      <div class="price-tag"><span class="strike">$499/mo</span> → $299/mo (Founding Hotels)</div>
+      
+      <div class="cta-buttons">
+        <a href="https://buy.stripe.com/eVqeV58w68AKgqdfiH3VC05" class="btn btn-primary">Start Free Trial — $299/mo after</a>
+      </div>
+      
+      <p style="margin: 20px 0; color: #6b7280;">or schedule a demo:</p>
+      
       <form action="https://formspree.io/f/xdkojpwa" method="POST">
         <input type="email" name="email" placeholder="Enter your work email" required>
         <input type="hidden" name="_subject" value="GuestPulse Demo Request">
         <button type="submit">Request Demo</button>
       </form>
       
-      <p class="trust">Currently in pilot with 3 boutique hotels in NYC and LA.</p>
+      <p class="trust">30-day free trial. Cancel anytime. Currently in pilot with 3 boutique hotels.</p>
     </div>
   </div>
 </body>
